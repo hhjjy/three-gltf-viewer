@@ -1,5 +1,5 @@
 # Cloudflare Pages headers
-# 放在 repo 根目錄，build 後會被複製進 dist/，CF Pages 自動套用
+# 放在 public/ 目錄，vite build 後會被複製進 dist/，CF Pages 自動套用
 # Vite 產出的 assets 檔名帶 hash，內容變了檔名就變 → 可安全設 immutable 長快取
 
 /assets/*
