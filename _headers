@@ -1,0 +1,13 @@
+# Cloudflare Pages headers
+# 放在 repo 根目錄，build 後會被複製進 dist/，CF Pages 自動套用
+# Vite 產出的 assets 檔名帶 hash，內容變了檔名就變 → 可安全設 immutable 長快取
+
+/assets/*
+  Cache-Control: public, max-age=604800, immutable
+
+# index.html 不快取，確保每次拿到最新版（指向新的 hash assets）
+/index.html
+  Cache-Control: no-cache
+
+/
+  Cache-Control: no-cache
